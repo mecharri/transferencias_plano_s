@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 from matplotlib.ticker import LinearLocator
 import control as ctl
 import math
+import cmath
 import symbolic
 
 s = ctl.TransferFunction.s
@@ -37,6 +38,15 @@ ax.set_title("Polos de la transferencia")
 fig2 = plt.figure()
 
 ctl.bode(H,dB=1, deg = 1);
+
+
+#Pruebas con complejos
+#inicializo numeros en las variables
+x = 5
+y = 3
+z = complex(x,y) #acá los convertí a números reales
+r = z**2
+print(r)
 
 
 #Módulo en 3D, en el plano S
